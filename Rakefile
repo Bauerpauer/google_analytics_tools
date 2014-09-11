@@ -11,8 +11,9 @@ Rake::TestTask.new do |t|
 end
 
 # Gem
+$:.push File.expand_path("../lib", __FILE__)
 require "rake/gempackagetask"
-require "lib/google_analytics_tools/version"
+require "google_analytics_tools/version"
 
 NAME = "google_analytics_tools"
 SUMMARY = "A clean interface to generating the Google Analytics _gaq"

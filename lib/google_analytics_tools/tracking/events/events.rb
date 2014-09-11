@@ -24,6 +24,14 @@ module GAQ::Events
 
   end
   
+  class TrackPageLoadTime < ::GAQ::Event
+
+    def initialize
+      super('_trackPageLoadTime')
+    end
+
+  end
+
   class TrackEvent < ::GAQ::Event
 
     def initialize(category, action, label = nil, value = nil)
